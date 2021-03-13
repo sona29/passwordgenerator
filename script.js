@@ -25,6 +25,17 @@ var generatePassword = function() {
       window.alert("Password cannot be greater than 128 characters");
     return;
     }
+ 
+    //Confirming other conditions
+    var specialCharsConfirm = window.confirm("Do you want special chars?");
+    var numbersConfirm = window.confirm("Do you want numbers?");
+    var lowerCaseConfirm = window.confirm("Do you want lower case alphabets?");
+    var upperCaseConfirm = window.confirm("Do you want upper case alphabets?");
+
+    console.log(specialCharsConfirm);
+    console.log(numbersConfirm);
+    console.log(lowerCaseConfirm);
+    console.log(upperCaseConfirm);
 }
 
 
