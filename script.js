@@ -38,16 +38,25 @@ var generatePassword = function() {
       window.alert("Must choose atleast one condition");
     return;
     }
-    else if(specialCharsConfirm && !numbersConfirm && !lowerCaseConfirm && !upperCaseConfirm){
-      console.log(specialChars.length);
 
+    //if only special characters are chosen  
+    else if(specialCharsConfirm && !numbersConfirm && !lowerCaseConfirm && !upperCaseConfirm){     
       for (var i = 0, n = specialChars.length; i < passwordLength; ++i) {
         retVal += specialChars.charAt(Math.floor(Math.random() * n));
-    }
-    console.log(retVal);
-      
+      }
+    console.log("1st" +retVal);      
     }
 
+
+    //if special chars and numbers are chosen
+    else if(specialCharsConfirm && numbersConfirm && !lowerCaseConfirm && !upperCaseConfirm){
+      totalLength = specialChars.concat(numbers);
+      console.log(totalLength);
+      for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
+        retVal += totalLength.charAt(Math.floor(Math.random() * n));
+      }
+    console.log(retVal);
+    }
    
 }
 
