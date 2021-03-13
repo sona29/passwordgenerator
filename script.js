@@ -1,3 +1,4 @@
+var generateBtn = document.querySelector("#generate");
 var specialChars = "!@#$%^&*(){}[]=<>/,.|~?";
 var numbers ="0123456789";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -6,6 +7,7 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 //Function to generate password
 var generatePassword = function() {
   var specialChars = "!@#$%^&*(){}[]=<>/,.|~?";
+  //for return value
   retVal = "";
 
   var passwordLength = window.prompt("Password Length");
@@ -44,13 +46,12 @@ var generatePassword = function() {
       for (var i = 0, n = specialChars.length; i < passwordLength; ++i) {
         retVal += specialChars.charAt(Math.floor(Math.random() * n));
       }
-    console.log("1st" +retVal);      
+    console.log("1st" +retVal);     
     }
 
     //if special chars and numbers are chosen
     else if(specialCharsConfirm && numbersConfirm && !lowerCaseConfirm && !upperCaseConfirm){
-      totalLength = specialChars.concat(numbers);
-      console.log(totalLength);
+      totalLength = specialChars.concat(numbers);      
       for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
         retVal += totalLength.charAt(Math.floor(Math.random() * n));
       }
@@ -61,7 +62,7 @@ var generatePassword = function() {
     //if special chars, numbers and lowercase are chosen
     else if(specialCharsConfirm && numbersConfirm && lowerCaseConfirm && !upperCaseConfirm){
       totalLength = "!@#$%^&*(){}[]=<>/,.|~?0123456789abcdefghijklmnopqrstuvwxyz";
-      console.log(totalLength);
+      
       for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
         retVal += totalLength.charAt(Math.floor(Math.random() * n));
       }
@@ -70,8 +71,7 @@ var generatePassword = function() {
 
     //if all conditions are chosen
     else{
-      totalLength = "!@#$%^&*(){}[]=<>/,.|~?0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      console.log(totalLength);
+      totalLength = "!@#$%^&*(){}[]=<>/,.|~?0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";      
       for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
         retVal += totalLength.charAt(Math.floor(Math.random() * n));
       }
@@ -81,6 +81,7 @@ var generatePassword = function() {
    
 }
 
-generatePassword();
+//generatePassword();
+generateBtn.addEventListener("click", generatePassword);
 
 
