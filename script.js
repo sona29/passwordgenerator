@@ -1,12 +1,9 @@
 var generateBtn = document.querySelector("#generate");
-var specialChars = "!@#$%^&*(){}[]=<>/,.|~?";
-var numbers ="0123456789";
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 //Function to generate password
 var generatePassword = function() {
   var specialChars = "!@#$%^&*(){}[]=<>/,.|~?";
+  var numbers ="0123456789";
   //for return value
   retVal = "";
 
@@ -22,7 +19,7 @@ var generatePassword = function() {
     return;
   }
 
-  //if password length is greate than 128
+  //if password length is greater than 128
    if(passwordLength>128)
     {
       window.alert("Password cannot be greater than 128 characters");
@@ -46,7 +43,7 @@ var generatePassword = function() {
       for (var i = 0, n = specialChars.length; i < passwordLength; ++i) {
         retVal += specialChars.charAt(Math.floor(Math.random() * n));
       }
-    console.log("1st" +retVal);     
+    console.log(retVal);     
     }
 
     //if special chars and numbers are chosen
