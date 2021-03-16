@@ -104,7 +104,6 @@ var generatePassword = function() {
 
       }
 
-
         //if only special characters and uppercase case is chosen
         else if(specialCharsConfirm && !numbersConfirm && !lowerCaseConfirm && upperCaseConfirm){
       
