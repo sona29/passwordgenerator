@@ -75,10 +75,14 @@ var generatePassword = function() {
     console.log(retVal);
 
     }
+ 
+    //passing the generated password to textarea
+    document.getElementById('password').value = retVal;
    
 }
 
-//generatePassword();
+
 generateBtn.addEventListener("click", generatePassword);
+
 
 
