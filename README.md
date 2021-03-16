@@ -8,7 +8,7 @@
 
 
 ## Mockup
-![alt text](images/password.png)
+![alt text](images/password.PNG)
 
 ## Link to deployed application
 
