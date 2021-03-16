@@ -55,7 +55,7 @@ var generatePassword = function() {
     console.log("second" + retVal);
     }
 
-    //
+    //if only alphabets are chosen
     else if(!specialCharsConfirm && !numbersConfirm && lowerCaseConfirm && upperCaseConfirm){
       
       totalLength = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -65,6 +65,17 @@ var generatePassword = function() {
       }
     console.log("alphaonly"+ retVal);
     }
+
+      //if only special characters and lowercase is chosen
+      else if(specialCharsConfirm && !numbersConfirm && lowerCaseConfirm && !upperCaseConfirm){
+      
+        totalLength = "!@#$%^&*(){}[]=<>/,.|~?abcdefghijklmnopqrstuvwxyz";
+        
+        for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
+          retVal += totalLength.charAt(Math.floor(Math.random() * n));
+        }
+      console.log("alphaonly"+ retVal);
+      }
 
 
     //if special chars, numbers and lowercase are chosen
