@@ -63,7 +63,7 @@ var generatePassword = function() {
       for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
         retVal += totalLength.charAt(Math.floor(Math.random() * n));
       }
-    console.log("alphaonly"+ retVal);
+    console.log(retVal);
     }
 
       //if only special characters and lowercase is chosen
@@ -74,9 +74,34 @@ var generatePassword = function() {
         for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
           retVal += totalLength.charAt(Math.floor(Math.random() * n));
         }
-      console.log("alphaonly"+ retVal);
+        console.log(retVal);
+
       }
 
+
+        //if only special characters and uppercase case is chosen
+        else if(specialCharsConfirm && !numbersConfirm && !lowerCaseConfirm && upperCaseConfirm){
+      
+          totalLength = "!@#$%^&*(){}[]=<>/,.|~?ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          
+          for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
+            retVal += totalLength.charAt(Math.floor(Math.random() * n));
+          }
+          console.log(retVal);
+
+        }
+
+         //if only numbers and uppercase case is chosen
+         else if(!specialCharsConfirm && numbersConfirm && !lowerCaseConfirm && upperCaseConfirm){
+      
+          totalLength = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          
+          for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
+            retVal += totalLength.charAt(Math.floor(Math.random() * n));
+          }
+          console.log(retVal);
+
+        }
 
     //if special chars, numbers and lowercase are chosen
     else if(specialCharsConfirm && numbersConfirm && lowerCaseConfirm && !upperCaseConfirm){
