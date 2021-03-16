@@ -45,7 +45,7 @@ var generatePassword = function() {
       for (var i = 0, n = specialChars.length; i < passwordLength; ++i) {
         retVal += specialChars.charAt(Math.floor(Math.random() * n));
       }
-    console.log("first"+ retVal);     
+    console.log(retVal);     
     }
 
      //if only numbers is chosen  
@@ -53,8 +53,26 @@ var generatePassword = function() {
       for (var i = 0, n = numbers.length; i < passwordLength; ++i) {
         retVal += numbers.charAt(Math.floor(Math.random() * n));
       }
-    console.log("first"+ retVal);     
+    console.log(retVal);     
     }
+
+     //if only lowercase is chosen  
+     else if(!specialCharsConfirm && !numbersConfirm && lowerCaseConfirm && !upperCaseConfirm){     
+      for (var i = 0, n = lowerCase.length; i < passwordLength; ++i) {
+        retVal += lowerCase.charAt(Math.floor(Math.random() * n));
+      }
+    console.log(retVal);     
+    }
+
+    //if only uppercase is chosen  
+    else if(!specialCharsConfirm && !numbersConfirm && !lowerCaseConfirm && upperCaseConfirm){     
+      for (var i = 0, n = upperCase.length; i < passwordLength; ++i) {
+        retVal += upperCase.charAt(Math.floor(Math.random() * n));
+      }
+    console.log(retVal);     
+    }
+
+    
 
     //if special chars and numbers are chosen
     else if(specialCharsConfirm && numbersConfirm && !lowerCaseConfirm && !upperCaseConfirm){
@@ -62,7 +80,7 @@ var generatePassword = function() {
       for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
         retVal += totalLength.charAt(Math.floor(Math.random() * n));
       }
-    console.log("second" + retVal);
+    console.log(retVal);
     }
 
     //if only alphabets are chosen
