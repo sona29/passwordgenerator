@@ -9,3 +9,7 @@
 
 ## Mockup
 ![alt text](images/password.png)
+
+## Link to deployed application
+
+https://sona29.github.io/passwordgenerator/
