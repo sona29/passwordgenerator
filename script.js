@@ -148,8 +148,18 @@ var generatePassword = function() {
       for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
         retVal += totalLength.charAt(Math.floor(Math.random() * n));
       }
-    console.log("third"+ retVal);
+    console.log(retVal);
     }
+
+      //if special chars, uppercase and lowercase are chosen
+      else if(specialCharsConfirm && !numbersConfirm && lowerCaseConfirm && upperCaseConfirm){
+        totalLength = "!@#$%^&*(){}[]=<>/,.|~?abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        
+        for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
+          retVal += totalLength.charAt(Math.floor(Math.random() * n));
+        }
+      console.log(retVal);
+      }
 
     //if numbers, uppercase and lowercase are chosen
     else if(!specialCharsConfirm && numbersConfirm && lowerCaseConfirm && upperCaseConfirm){
@@ -158,7 +168,7 @@ var generatePassword = function() {
       for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
         retVal += totalLength.charAt(Math.floor(Math.random() * n));
       }
-    console.log("third"+ retVal);
+    console.log(retVal);
     }
 
     //if all conditions are chosen
@@ -167,7 +177,7 @@ var generatePassword = function() {
       for (var i = 0, n = totalLength.length; i < passwordLength; ++i) {
         retVal += totalLength.charAt(Math.floor(Math.random() * n));
       }
-    console.log("fourth"+retVal);
+    console.log(retVal);
 
     }
  
